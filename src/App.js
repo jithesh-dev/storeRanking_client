@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import "./App.scss";
+import StoreTable from "./components/StoreTable/StoreTable.Component";
+import { AiOutlinePlus } from "react-icons/ai";
+import AddStoreModal from "./components/AddStoreModal/AddStoreModal.Component";
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="App_Container">
+        <button
+          className="App_addStoreBtn btn-grad"
+          onClick={() => setIsOpen(true)}
         >
-          Learn React
-        </a>
-      </header>
+          <AiOutlinePlus /> Add Store
+        </button>
+        <StoreTable />
+      </div>
+      <AddStoreModal open={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 }

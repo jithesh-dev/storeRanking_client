@@ -1,0 +1,50 @@
+.StoreTable {
+  margin-top: 60px;
+  border-spacing: 0px 5px;
+  border-collapse: separate;
+  td {
+    font-size: 0.9rem;
+  }
+  th,
+  td {
+    padding: 0px 15px;
+    max-width: 200px;
+    text-align: left;
+  }
+  tr {
+    height: 50px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  tr:first-child {
+    background: none;
+    cursor: unset;
+    vertical-align: text-top;
+  }
+
+  tr:hover {
+    background: rgb(103, 96, 253);
+    background: linear-gradient(
+      298deg,
+      rgba(103, 96, 253, 0.4) 0%,
+      rgba(72, 217, 194, 0.4) 100%
+    );
+  }
+  tr:first-child:hover {
+    background: none;
+  }
+  tr td:first-child {
+    border-top-left-radius: 5px;
+  }
+  tr td:last-child {
+    border-top-right-radius: 5px;
+  }
+  tr td:first-child {
+    border-bottom-left-radius: 5px;
+  }
+  tr td:last-child {
+    border-bottom-right-radius: 5px;
+  }
+}
