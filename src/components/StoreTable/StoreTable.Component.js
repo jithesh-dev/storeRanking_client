@@ -1,13 +1,22 @@
-import React from "react";
-import "./StoreTable.Style.scss";
-import { AiOutlineStock } from "react-icons/ai";
+import React, { useState, useEffect } from 'react';
+import './StoreTable.Style.scss';
+import { AiOutlineStock } from 'react-icons/ai';
 
-import storeData from "../../data/data";
+import storeData from '../../data/data';
+import getStoreData from '../../api/storeRank.API';
 
 const StoreTable = () => {
+  const [store, setStore] = useState([]);
+
+  useEffect(() => {
+    getStoreData()
+      .then((res) => console.log(res))
+      .catch((e) => console.log(e));
+  }, []);
+
   return (
     <>
-      <table className="StoreTable">
+      <table className='StoreTable'>
         <tr>
           <th>Your Stores</th>
           <th>

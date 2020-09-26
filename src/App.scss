@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   box-sizing: border-box;
@@ -13,8 +13,11 @@
   align-items: center;
   justify-content: center;
   background: #f9f9fb;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: relative;
+}
+.App__Container {
+  max-width: 90%;
 }
 
 .btn-grad {

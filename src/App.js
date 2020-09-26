@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import "./App.scss";
-import StoreTable from "./components/StoreTable/StoreTable.Component";
-import { AiOutlinePlus } from "react-icons/ai";
-import AddStoreModal from "./components/AddStoreModal/AddStoreModal.Component";
+import React, { useState } from 'react';
+import './App.scss';
+import StoreTable from './components/StoreTable/StoreTable.Component';
+import { AiOutlinePlus } from 'react-icons/ai';
+import AddStoreModal from './components/AddStoreModal/AddStoreModal.Component';
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="App">
-      <div className="App_Container">
+    <div className='App'>
+      <div className='App__Container'>
         <button
-          className="App_addStoreBtn btn-grad"
+          className='App__addStoreBtn btn-grad'
           onClick={() => setIsOpen(true)}
         >
           <AiOutlinePlus /> Add Store
